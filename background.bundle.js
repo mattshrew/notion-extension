@@ -864,13 +864,13 @@
           })(n, t);
         switch (s) {
           case "install":
-            chrome.tabs.create({ url: "https://gourav.io/notion-boost" });
             break;
           case "update":
-            ("major" !== a && "minor" !== a) ||
-              chrome.tabs.create({
-                url: "https://gourav.io/notion-boost/whats-new",
-              });
+            // ("major" !== a && "minor" !== a) ||
+            //   chrome.tabs.create({
+            //     url: "https://gourav.io/notion-boost/whats-new",
+            //   });
+            break;
         }
       });
     })();

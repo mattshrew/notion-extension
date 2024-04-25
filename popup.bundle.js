@@ -2786,7 +2786,7 @@
       return r;
     }
     function pt(e) {
-      var t = e.isPaid,
+      var t = true,
         n = lt(ee(""), 2),
         r = n[0],
         o = n[1],
@@ -2958,90 +2958,6 @@
           },
           _("span", { className: "icon-nb" }),
           "Notion Boost"
-        ),
-        _(
-          "div",
-          { className: "payment" },
-          _(
-            "div",
-            null,
-            "Please upgrade to use all 'pro' features. ",
-            _("br", null),
-            " One-time payment of",
-            " ",
-            Le,
-            " USD for lifetime access! ",
-            _("br", null),
-            _(
-              "i",
-              null,
-              "Note: Price will go up to ",
-              Me,
-              " after next update."
-            )
-          ),
-          _(
-            "div",
-            { className: "pricing" },
-            _(
-              "div",
-              { className: "features" },
-              _("div", null, _(ft, null), " Use exisiting 'pro' features."),
-              _(
-                "div",
-                null,
-                _(ft, null),
-                " All upcoming 'pro' features will be free."
-              ),
-              _(
-                "div",
-                null,
-                _(ft, null),
-                " Same account works on different Chrome profiles."
-              ),
-              _(
-                "div",
-                null,
-                _(ft, null),
-                " Same account works on different browsers i.e. Chrome, Firefox, Edge, Brave, etc. (not supported on Safari yet)."
-              ),
-              _(
-                "div",
-                null,
-                _(ft, null),
-                " Works even when you uninstall/reinstall this extension."
-              )
-            ),
-            _(
-              "div",
-              {
-                role: "button",
-                "aria-disabled": "false",
-                tabIndex: 0,
-                className: "payBtn",
-                onClick: xt,
-              },
-              "Purchase for ",
-              Le
-            ),
-            _(
-              "div",
-              { className: "loginWrapper" },
-              "Already paid?",
-              "  ",
-              _(
-                "div",
-                {
-                  role: "button",
-                  "aria-disabled": "false",
-                  tabIndex: 0,
-                  className: "loginBtn",
-                  onClick: xt,
-                },
-                "Login"
-              )
-            )
-          )
         )
       );
     }
@@ -3190,7 +3106,8 @@
                     "aria-disabled": "false",
                     tabIndex: 0,
                     onClick: function () {
-                      t ? xt() : ke("/payment", !0);
+                    //   t ? xt() : ke("/payment", !0);
+                      return;
                     },
                   },
                   "Pro ",
