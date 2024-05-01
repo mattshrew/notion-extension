@@ -310,6 +310,7 @@
       h.Z && h.Z.locals && h.Z.locals;
       var f = {
         displayOutline: !0,
+        toggleAll: !1,
         hideHelpBtn: !1,
         bolderTextInDark: !1,
         smallText: !1,
@@ -1492,6 +1493,33 @@
               e && e.remove();
             })(),
             Q());
+      }),
+      (nt.toggleAll = function (e) {
+        e 
+          ? T(Be)
+            .then(function (t) {
+              // class="pseudoSelection" data-text-edit-side="start"
+              // "flex: 1 1 0px; min-width: 1px;"
+
+              Array.from(document.querySelectorAll('div[style="flex: 1 1 0px; min-width: 1px;"]'))
+                                              .filter(x => x.childElementCount == 1)
+                                              .forEach(e => e.parentElement.firstChild.firstChild.click());
+
+              // var closed = Array.from(document.querySelectorAll('div[style="flex: 1 1 0px; min-width: 1px;"]'))
+              //                                 .filter(x => x.childElementCount == 1);
+                                              
+              // while (closed.length > 0) {
+              //   closed.forEach(e => e.parentElement.firstChild.firstChild.click());
+              //   closed = Array.from(document.querySelectorAll('div[style="flex: 1 1 0px; min-width: 1px;"]'))
+              //                                 .filter(x => x.childElementCount == 1);
+              // }
+            })
+            .catch(function (e) {})
+          : ( T(Be)
+            .then(function (t) {
+              return;
+            })
+          );
       }),
         (nt.scrollTopBtn = function (e) {
           try {

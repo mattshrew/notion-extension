@@ -2204,6 +2204,7 @@
     });
     var je = {
         displayOutline: !0,
+        toggleAll: !1,
         hideHelpBtn: !1,
         bolderTextInDark: !1,
         smallText: !1,
@@ -2242,6 +2243,12 @@
           func: "displayOutline",
           name: "Show Outline",
           desc: "Show sticky outline (table of contents) for pages that have headings",
+          pf: !1,
+        },
+        {
+          func: "toggleAll",
+          name: "Open Toggles",
+          desc: "Open all toggles and toggle headings in the page",
           pf: !1,
         },
         {
